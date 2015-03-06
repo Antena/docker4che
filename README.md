@@ -7,14 +7,12 @@ Dockerfile to build and run dcm4che
 
 ####Usage####
 
-First run:
+To build the container:
 
     docker build --rm=true -t dcm4chee .
     
-For successive builds, a bash script is provided:
-
-    bash ./setup.bash
-    
 To run the container:
 
-    bash ./run.bash
+    docker run -p 8080:8080 -p 11112:11112 dcm4chee
+
+To access the dcm4chee web-console: http://192.168.59.103:8080/dcm4chee-web3/
